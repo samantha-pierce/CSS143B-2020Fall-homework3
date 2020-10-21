@@ -26,13 +26,13 @@ public class LinkedListStack<T> implements Stack<T> {
         // homework
         //T val = data.getLast();
         //data.pop();
-        return data.pop();
+        return data.removeLast();
     }
 
     @Override
     public T peek() {
         // homework
-        return data.peek();
+        return data.peekLast();
     }
 
     @Override
