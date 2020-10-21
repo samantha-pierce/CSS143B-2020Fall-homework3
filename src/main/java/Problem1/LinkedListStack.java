@@ -15,25 +15,24 @@ public class LinkedListStack<T> implements Stack<T> {
     @Override
     public boolean push(T val) {
         // homework
-        if (data == null || size() == 0) {
+        if (data == null) {
             return false;
         }
-        data.add(val);
-        return true;
+        return data.add(val);
     }
 
     @Override
     public T pop() {
         // homework
-        T val = data.getLast();
-        data.pop();
-        return val;
+        //T val = data.getLast();
+        //data.pop();
+        return data.pop();
     }
 
     @Override
     public T peek() {
         // homework
-        return data.getLast();
+        return data.peek();
     }
 
     @Override

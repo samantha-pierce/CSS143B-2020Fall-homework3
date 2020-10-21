@@ -11,8 +11,8 @@ public class ArrayStack<T> implements Stack<T> {
     public ArrayStack(int capacity) {
         // homework
         if (capacity > 0) {
+            //size = capacity;
             data = (T[]) new Object[capacity];
-            size = capacity;
         }
         size = 0;
     }
@@ -34,10 +34,7 @@ public class ArrayStack<T> implements Stack<T> {
         if (size == 0) {
             return null;
         }
-        T val = data[0];
-        for (int i = 0; i < data.length; i++) {
-            data[i] = data[i + 1];
-        }
+        T val = data[size - 1];
         size--;
         return val;
     }
@@ -48,7 +45,7 @@ public class ArrayStack<T> implements Stack<T> {
         if (size == 0) {
             return null;
         }
-        return data[0];
+        return data[size - 1];
     }
 
     @Override
