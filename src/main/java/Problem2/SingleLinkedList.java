@@ -47,7 +47,7 @@ public class SingleLinkedList {
         // in-place
         ListNode prev = null;
         ListNode current = head.next;
-        ListNode next = null;
+        ListNode next;
         while (current != null) {
             next = current.next;
             current.next = prev;
